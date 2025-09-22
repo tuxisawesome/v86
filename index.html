@@ -1,25 +1,25 @@
 <!doctype html>
 <title>Save and restore</title>
 
-<script src="/files/libv86.js"></script>
+<script src="files/libv86.js"></script>
 <script>
 "use strict";
 
 window.onload = function()
 {
     var emulator = new V86({
-        wasm_path: "../build/v86.wasm",
+        wasm_path: "files/v86.wasm",
         memory_size: 32 * 1024 * 1024,
         vga_memory_size: 2 * 1024 * 1024,
         screen_container: document.getElementById("screen_container"),
         bios: {
-            url: "/files/seabios.bin",
+            url: "files/seabios.bin",
         },
         vga_bios: {
-            url: "/files/vgabios.bin",
+            url: "files/vgabios.bin",
         },
         cdrom: {
-            url: "/files/TinyCore-current.iso",
+            url: "files/TinyCore-current.iso",
         },
         autostart: true,
     });
